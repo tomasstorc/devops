@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nfs-mount
+  namespace: default
+  labels:
+    app: "nfs-mount"
+spec:
+  containers:
+    - name: nfs-mount
+      image: nginx
+      resources:
+        limits:
+          cpu: 200m
+          memory: 500Mi
+        requests:
+          cpu: 100m
+          memory: 200Mi
+      volumeMounts:
+        - name: nfs
+          mountPath: /mnt/nfs-share
+  volumes:
+    - name: nfs
+      persistentVolumeClaim:
+        claimName: nfs-pvc
