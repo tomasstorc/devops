@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
     - name: nfs-mount
-      image: nginx
+      image: ubuntu:latest
       resources:
         limits:
           cpu: 200m
@@ -19,6 +19,8 @@ spec:
       volumeMounts:
         - name: nfs
           mountPath: /mnt/nfs-share
+      command: ["/bin/bash", "-c", "--"]
+      args: ["while true; do sleep 30; done;"]
   volumes:
     - name: nfs
       persistentVolumeClaim:
