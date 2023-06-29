@@ -24,4 +24,5 @@ runs:
       uses: "hashicorp/setup-terraform@v1"
     - name: Run terraform validate
       working-directory: ${{ inputs.tf_dir }}
+      shell: bash
       run: terraform validate
