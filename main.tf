@@ -14,6 +14,6 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "example" {
-  name     = "example-rg"
+  name     = "tstorc-test-atlantis-rg"
   location = "West Europe"
 }
