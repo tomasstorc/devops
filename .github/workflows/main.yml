@@ -20,7 +20,7 @@ jobs:
         id: getcontent
         run: |
           text=$(cat README.md)
-          echo "content=$text >> $GITHUB_OUTPUT
+          echo "content=$text" >> $GITHUB_OUTPUT
           cat README.md
       - name: call
         uses: tomasstorc/markdowntest@main
