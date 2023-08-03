@@ -16,7 +16,11 @@ jobs:
           sparse-checkout: |
             README.md
           sparse-checkout-cone-mode: false
+      - name: get content
+        id: getcontent
+        run: |
+          echo "::set-output name=content::$(cat README.md)"
       - name: call
         uses: tomasstorc/markdowntest@main
         with:
-          filename: README.md
+          markdown: ${{ steps.getcontent.outputs.content }}
