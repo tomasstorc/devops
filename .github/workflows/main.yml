@@ -25,4 +25,5 @@ jobs:
       - name: call
         uses: tomasstorc/markdowntest@main
         with:
-          markdown: ${{ steps.getcontent.outputs.content }}
+          #  markdown: ${{ steps.getcontent.outputs.content }}
+          filename: README.md
