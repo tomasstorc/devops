@@ -8,12 +8,13 @@ terraform {
 }
 
 provider "azurerm" {
+    skip_provider_registration = "true"
   features {
     
   }
 }
 
 resource "azurerm_resource_group" "example" {
-  name     = "example-rg"
+  name     = "tstorc-test-atlantis-rg"
   location = "West Europe"
 }
