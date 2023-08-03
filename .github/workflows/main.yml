@@ -27,8 +27,9 @@ jobs:
         with:
           #  markdown: ${{ steps.getcontent.outputs.content }}
           filename: README.md
+          spacekey: ~701219c9808ed6f6b4abda4f307a0e1ab58a6
+          cnflurl: https://tstest-dev.atlassian.net/
+          title: "Page created from markdown"
         env:
-          CNFL_URL: https://tstest-dev.atlassian.net/
-          SPACE_KEY: ~701219c9808ed6f6b4abda4f307a0e1ab58a6
           CNFL_USER: ${{ secrets.CNFL_USER }}
           API_KEY: ${{ secrets.API_KEY }}
