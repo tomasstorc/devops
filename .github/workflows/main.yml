@@ -19,7 +19,8 @@ jobs:
       - name: get content
         id: getcontent
         run: |
-          echo "content=$(cat README.md)" >> $GITHUB_OUTPUT
+          text=$(cat README.md)
+          echo "content=$text >> $GITHUB_OUTPUT
           cat README.md
       - name: call
         uses: tomasstorc/markdowntest@main
