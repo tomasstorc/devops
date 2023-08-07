@@ -23,7 +23,7 @@ jobs:
           cat README.md >> $GITHUB_OUTPUT
           echo 'EOF' >> $GITHUB_OUTPUT
       - name: call
-        uses: tomasstorc/markdown-to-confluence@main
+        uses: tomasstorc/markdown-to-confluence@refactor
         with:
           #  markdown: ${{ steps.getcontent.outputs.content }}
           filename: README.md
