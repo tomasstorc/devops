@@ -23,12 +23,12 @@ jobs:
           cat README.md >> $GITHUB_OUTPUT
           echo 'EOF' >> $GITHUB_OUTPUT
       - name: call
-        uses: tomasstorc/markdown-to-confluence@refactor
+        uses: tomasstorc/markdown-to-confluence@v2.4
         with:
           #  markdown: ${{ steps.getcontent.outputs.content }}
           filename: README.md
           spacekey: ~701219c9808ed6f6b4abda4f307a0e1ab58a6
           cnflurl: https://tstest-dev.atlassian.net/
-          # title: "React reduced"
+          title: "React final"
           cnfluser: ${{ secrets.CNFL_USER }}
           apikey: ${{ secrets.API_KEY }}
